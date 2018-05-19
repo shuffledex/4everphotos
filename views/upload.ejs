@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Upload photos blockchain</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="/skeleton-css/css/skeleton.css">
+  <link rel="stylesheet" href="/skeleton-css/css/normalize.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="/stylesheets/upload.css">
+
+</head>
+
+  <div class="container" id="upload">
+    <div class="row header">
+      <h3>Upload a new photo to your book, 4ever.</h3>
+      <p style="font-size: 12px;"><i class="fas fa-terminal"></i> <a href="javascript:" id="howUpload">Upload photo from Nebulas wallet</p></a>
+    </div>
+    <div class="row" style="margin-top:45px;">
+      <div class="row" id="uploadLoader">
+        <div class="loader"></div>
+      </div>
+      <div class="row" id="ok">
+        <h5 id="success">Fantastic, your photo has been uploaded forever!</h5>
+        <a class="button button-primary" href="#" id="go">Go to see your book</a>
+      </div>
+      <div class="base">
+        <div class="seven columns">
+          <h5 id="error"></h5>
+          <form>
+            <ul>
+              <li>We recommend upload small photos <b>(no more than 50kb)</b></li>
+              <li>We suggest use <a href="https://tinypng.com/" target="_blank">tinypng</a> to compress the size of your pictures.</li>
+            <ul>
+            <label for="description">Photo description</label>
+            <textarea class="u-full-width" placeholder="The best day of my life!" id="description"></textarea>
+            <input class="u-full-width" style="font-size:16px;margin:10px 0;" type="file" onchange="encodeImageFileAsURL(this)" />
+            <input type="text" id="base64" />
+            <a class="button button-primary" id="uploadPhoto" disabled>Upload</a>
+          </form>
+        </div>
+        <div class="five columns">
+
+          <div class="wrapper swingimage">
+            <div class="picture">
+              <div class="hook"></div>
+              <div class="frame">
+                <div class="inside"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div> 
+  </div>
+
+  <script src="/jquery/dist/jquery.min.js"></script>
+  <script src="/nebpay.js/dist/nebPay.js"></script>
+  <script src="/javascripts/main.js"></script>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

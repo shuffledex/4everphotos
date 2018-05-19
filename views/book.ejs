@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title><%= address %> album Blockchain</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="/skeleton-css/css/skeleton.css">
+  <link rel="stylesheet" href="/skeleton-css/css/normalize.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="/stylesheets/book.css">
+
+</head>
+
+  <div class="outer" id="loaderStatus">
+    <div class="middle">
+      <div class="inner">
+        <h4 id="msg">Loading book from blockchain...</h4>
+        <p style="text-align: center;">Remember, you need to <a href="https://github.com/ChengOrangeJu/WebExtensionWallet" target="_blank">install WebExtensionWallet for Nebulas Blockchain</a> to make it works.</p>
+        <div class="loader"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="gallery">
+    <div class="row header">
+      <div class="seven columns">
+        <h3 id="bookName">[book name]</h3>
+        <p style="margin-bottom: 0;">Address book: <b id="bookAddress">[book address]</b></p>
+        <p style="font-size: 12px;"><i class="fas fa-terminal"></i> <a href="javascript:" id="howGetAlbum">Get album from Nebulas wallet</p></a>
+      </div>
+      <div class="five columns" style="text-align:right;">
+        <a class="button button-primary" href="../upload">Upload new photo to your book</a>
+      </div>
+    </div>
+    <div class="row">
+      <p class="sync"><i>If you added a photo recently and still you don't see it, don't worry, sometimes the Blockchain takes time to synchronize.</i></p>
+      <div class="gallery">
+        <p>No photos yet.</p>
+      </div>
+    </div> 
+  </div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+  <div id="hash"></div>
+  <div id="time"></div>
+</div>
+
+  <script src="/jquery/dist/jquery.min.js"></script>
+  <script src="/nebpay.js/dist/nebPay.js"></script>
+  <script src="/javascripts/main.js"></script>
+  <script type="text/javascript">
+    var address = "<%= address %>"
+    loadBook();
+  </script>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
