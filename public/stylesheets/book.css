@@ -60,9 +60,6 @@
      break-inside: avoid;
     /* For standard browsers like IE. :-) */
 }
- .gallery img:hover {
-     opacity: 0.8;
-}
  .modal-img,.model-vid{
      width:100%;
      height: auto;
@@ -196,20 +193,17 @@
      height: 150px;
      text-transform: capitalize;
 }
- #hash, #time {
-     margin: auto;
-     display: block;
-     width: 80%;
-     max-width: 700px;
-     text-align: center;
-     color: black;
-     padding: 10px 0;
-     text-transform: capitalize;
-     font-size: 12px;
-}
  .modal-content, #caption {
      animation-name: zoom;
      animation-duration: 0.6s;
+}
+#img01 {
+    max-height: 400px;
+}
+#hash,
+#time {
+    margin: 0;
+    font-size: 12px;
 }
  @keyframes zoom {
      from {

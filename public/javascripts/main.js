@@ -126,7 +126,8 @@ function encodeImageFileAsURL(element) {
             $("#base64").val(reader.result)
             $("#uploadPhoto").css("display", "block");
             $('.swingimage').css("display", "block");
-            $(".inside").attr("style", 'background:url(' + reader.result + ')');
+            $(".inside img").attr("src", reader.result);
+
         } else {
             $('#error').css("display", "block");
             $('#error').html("Photo size incorrect. 50kb max.");
@@ -209,9 +210,9 @@ function openImg(elem) {
 
     $("#myModal").css("display", "block");
     $("#img01").attr("src", img);
-    $("#caption").html(desc);
-    $("#hash").html("Nebulas transaction hash: " + hash);
-    $("#time").html("Timestamp: " + time);
+    $("#caption #desc").html(desc);
+    $("#caption #hash").html("Nebulas transaction hash: " + hash);
+    $("#caption #time").html("Timestamp: " + time);
 };
 
 var span = document.getElementsByClassName("close")[0];
