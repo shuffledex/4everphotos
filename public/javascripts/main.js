@@ -4,7 +4,7 @@ var serialNumber;
 var intervalQuery;
 //const callbackUrl = NebPay.config.mainnetUrl;
 const callbackUrl = NebPay.config.testnetUrl;
-const contract = "n1v3kwbQAcZscJzCjmdaZVCGPnsn3qFY4XS";
+const contract = "n1iMbG2YqyX9ZBnv5AzowZryL3fYadm3Qoq";
 
 $('#bookName').focus();
 
