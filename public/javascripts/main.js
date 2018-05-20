@@ -2,9 +2,10 @@ const NebPay = require("nebpay");
 const nebPay = new NebPay();
 var serialNumber;
 var intervalQuery;
-//const callbackUrl = NebPay.config.mainnetUrl;
-const callbackUrl = NebPay.config.testnetUrl;
-const contract = "n1iMbG2YqyX9ZBnv5AzowZryL3fYadm3Qoq";
+const callbackUrl = NebPay.config.mainnetUrl;
+const contract = "n1jh7Peq1WVHN3A3EKdQc4V7q9WeBpTMVfk";
+//const callbackUrl = NebPay.config.testnetUrl;
+//const contract = "n1iMbG2YqyX9ZBnv5AzowZryL3fYadm3Qoq";
 
 $('#bookName').focus();
 
