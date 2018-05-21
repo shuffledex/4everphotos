@@ -91,7 +91,7 @@ function loadBook() {
 
 function loadBookListener(resp) {
 
-    if (resp.execute_err == "") {
+    if (resp.execute_err == "" || resp.execute_err == "insufficient balance") {
 
         var result = JSON.parse(resp.result);
 
